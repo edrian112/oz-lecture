@@ -1,0 +1,88 @@
+body {
+  max-width: 80vw;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+header {
+  padding: 2rem;
+  border-bottom: 0.2rem solid;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+#posts {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  gap: 2rem;
+}
+.post {
+  padding: 1.5rem;
+  border: 0.2rem solid;
+}
+
+aside {
+  width: 25vw;
+  padding: 1.5rem;
+  margin-right: 2vw;
+  font-size: 1em;
+}
+
+footer {
+  padding: 1.5rem;
+  border-top: 0.2rem solid;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin: 2vw;
+}
+
+/* 미디어쿼리 */
+/* 태블릿 (최대 1023px) */
+@media (max-width: 1023px) {
+  body {
+    max-width: 90vw;
+  }
+}
+#posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+nav ul {
+  gap: 3rem;
+}
+aside {
+  width: 30vw;
+  padding: 1rem;
+}
+
+/* 모바일 (최대 767px) */
+@media (max-width: 767px) {
+  body {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #posts {
+    display: grid;
+    grid-template-columns: min-content;
+    gap: 1rem;
+  }
+  aside {
+    width: 100%;
+    margin: 1rem;
+  }
+}
