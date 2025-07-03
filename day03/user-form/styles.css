@@ -1,0 +1,118 @@
+/* 전체 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* p 그룹에 마진적용 */
+.class p.form-group {
+  margin-bottom: 15px;
+}
+
+/* body 선택자에 배경색과 폰트적용  */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* # = id "registration-form"에 적용 */
+#registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* 각 타입(박스안)에 해당 속성 적용 */
+[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+[type="email"] {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+[type="password"] {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* 버튼 색상 적용 */
+[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+[type="reset"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* 후손 선택자 - 폼 내 모든 p에 속성 적용 */
+form p {
+  padding: 5px;
+}
+
+/* 자식 선택자 - 폼 내 직계 p에 속성 적용*/
+form > p {
+  border-bottom: 1px solid #eee;
+}
+
+/* form의 첫번째 div에 상단 여백 추가 */
+form > div:first-child {
+  margin-top: 20px;
+}
+
+/* 폼 그룹 뒤에 구분선 역할하는 컨텐츠 추가 */
+.form-group::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #ddd;
+  margin-top: 10px;
+}
+
+/* 라벨 정렬 */
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+/* 라벨뒤에 빨간 별 표시 */
+label::after {
+  content: "*";
+  color: red;
+}
+
+/* 셀렉트 너비와 테두리 설정 */
+select {
+  width: 100%;
+  border: 3px solid #fa3f3f;
+}
+
+/* 버튼에 마우스 오버시 배경색 변경 */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+button[type="reset"]:hover {
+  background-color: #0056b3;
+}
+
+/* select에 마우스 오버시 테두리 색상 변경 */
+select:hover {
+  border-color: #007bff;
+}
+
+/* select 첫번째 드롭다운 옵션에 다른 글꼴 적용 */
+select option:first-child {
+  font-weight: bold;
+}
+
+/* 제목 뒤에 장식요소 추가 */
+h1::after {
+  content: "✨";
+  margin-left: 10px;
+}
