@@ -4,10 +4,14 @@ console.log(inputStr);
 let input = parseInt(inputStr);
 console.log(input);
 
-// 도전과제 // 코드 유효성 검사
-if (isNaN(input) || input < 0 || input > 100) {
-  console.log("Invalid score! Please enter a number between 0 and 100.");
-} else {
+function main() {
+  promptScore();
+  if (input < 0 || input)
+    if (isNaN(input) || input < 0 || input > 100) {
+      // 도전과제 // 코드 유효성 검사
+      console.log("Invalid score! Please enter a number between 0 and 100.");
+    }
+  //  else {
   const MAX_SCORE = 105;
   let score;
   var grade;
